@@ -82,6 +82,6 @@ int main()
 	int n = 3;
 	int m = 3;
 	int target = 34;
-	cout<<binary(arr, n, m, target);
-    cout<<lin(arr, 9, 20)<<endl;
+    cout<<lin(arr, 9, 20)<<endl; // for bruteforce
+	cout<<binary(arr, n, m, target); // for binarysearch
 }
