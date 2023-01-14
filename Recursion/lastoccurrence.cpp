@@ -6,7 +6,7 @@ int lastoccurrence(int arr[], int n, int index, int target)
 	{
 		return index;
 	}
-	if(index == n)
+	if(index < 0)
 	{
 		return -1;
 	}
