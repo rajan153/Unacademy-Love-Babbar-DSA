@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int firstOccurence(int arr[], int n, int index, int target)
+int firstoccurrence(int arr[], int n, int index, int target)
 {
 	if(arr[index] == target)
 	{
@@ -10,7 +10,7 @@ int firstOccurence(int arr[], int n, int index, int target)
 	{
 		return -1;
 	}
-	return firstOccurence(arr, n, index+1, target);
+	return firstoccurrence(arr, n, index+1, target);
 }
 int main()
 {
@@ -18,6 +18,6 @@ int main()
 	int n = 7;
 	int target = 3;
 	int index = 0;
-	cout<<firstOccurence(arr, n, index, target);
+	cout<<firstoccurrence(arr, n, index, target);
 	
 }
