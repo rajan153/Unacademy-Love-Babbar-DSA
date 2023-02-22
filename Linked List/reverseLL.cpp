@@ -112,6 +112,10 @@ void deleteAnyNode(Node* &tail, Node* &head, int target, int Position)
 		prev->next = temp->next;
 		temp->next = NULL;
 		delete temp;
+		if(prev->next == NULL)
+		{
+			tail = prev;
+		}
 	}
 }
 Node* reverseLL(Node* &head)
@@ -159,7 +163,7 @@ int main()
 	//Deletion All Method Head, Middle, ans Last
 	//First
 	cout<<"deleteAnyNode Function: "<<endl;
-	deleteAnyNode(tail, head, 5, 1);
+	deleteAnyNode(tail, head, 7, 1);
 	//Printing Function
 	traverse(head);
 	cout<<"Head: "<<head->data<<endl;
