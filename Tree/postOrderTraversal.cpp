@@ -30,14 +30,14 @@ Node* buildTree()
     
     return newNode;
 }
-void preOrder(Node*& root)
+void postOrder(Node*& root)
 {
     if(root == NULL)
         return;
     //left
-    preOrder(root->left);
+    postOrder(root->left);
     //right
-    preOrder(root->right);
+    postOrder(root->right);
     //Root
     cout<<root->data<<endl;
 }
@@ -46,5 +46,5 @@ int main()
     Node* root = NULL;
     root = buildTree();
     //Traversal
-    preOrder(root);
+    postOrder(root);
 }
