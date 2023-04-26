@@ -74,6 +74,8 @@ void levelTreeTraversal(Node *&root)
         }
     }
 }
+// T.C. - O(N)
+// S.C. - O(N)
 Node *lowestCommonAncestor(Node *root, Node *p, Node *q)
 {
     if (root == NULL)
@@ -85,17 +87,35 @@ Node *lowestCommonAncestor(Node *root, Node *p, Node *q)
     else
         return root;
 }
+
+// T.C. - O(N)
+// S.C. - O(1)
+// Node *lowestCommonAncestor(Node *root, Node *p, Node *q)
+// {
+//     if (root == NULL)
+//         return NULL;
+//     while (root != NULL)
+//     {
+//         if (root->data < p->data && root->data < q->data)
+//             root = root->right;
+//         else if (root->data > p->data && root->data > q->data)
+//             root = root->left;
+//         else
+//             break;
+//     }
+//     return root;
+// }
 int main()
 {
     Node *root = NULL;
     createBST(root);
     levelTreeTraversal(root);
     cout << endl;
-    Node* p = new Node(2);
-    Node* q = new Node(4);
+    Node *p = new Node(2);
+    Node *q = new Node(4);
     cout << "Lowest Ancestor: " << endl;
     // INPUT:- 6 2 8 0 4 7 9 3 5 -1
-    Node* t = lowestCommonAncestor(root, p, q);
-    cout<<t->data;
+    Node *t = lowestCommonAncestor(root, p, q);
+    cout << t->data;
     cout << endl;
 }
